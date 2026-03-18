@@ -1,0 +1,46 @@
+{
+  "name": "@kongyo2/tiki-pedia-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for 知木ペディア (Tiki-pedia) MediaWiki API on Miraheze",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "tiki-pedia-mcp-server": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint --silent",
+    "lint:strict": "oxlint --deny-warnings",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check:file": "prettier --check"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "mediawiki",
+    "tiki-pedia",
+    "miraheze",
+    "model-context-protocol"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "oxlint": "^1.56.0",
+    "prettier": "^3.8.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
