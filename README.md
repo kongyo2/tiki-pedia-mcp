@@ -2,6 +2,8 @@
 
 [知木ペディア](https://tiki.miraheze.org/)（Miraheze上のMediaWiki）向けMCPサーバーです。
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/kongyo2/tiki-pedia-mcp)
+
 ## セットアップ
 
 ### Claude Code
