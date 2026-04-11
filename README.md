@@ -2,6 +2,8 @@
 
 [知木ペディア](https://tiki.miraheze.org/)（Miraheze上のMediaWiki）向けMCPサーバーです。
 
+[![npm version](https://img.shields.io/npm/v/@kongyo2/tiki-pedia-mcp-server)](https://www.npmjs.com/package/@kongyo2/tiki-pedia-mcp-server)
+[![CI](https://github.com/kongyo2/tiki-pedia-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/kongyo2/tiki-pedia-mcp/actions/workflows/ci.yml)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/kongyo2/tiki-pedia-mcp)
 
 ## セットアップ
