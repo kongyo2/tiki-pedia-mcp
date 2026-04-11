@@ -1,0 +1,39 @@
+name: Inspector Integration
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  inspector:
+    name: MCP Inspector CLI
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: List tools
+        run: npx @modelcontextprotocol/inspector --cli node dist/index.js --method tools/list
+
+      - name: Call tiki_check_page_exists
+        run: npx @modelcontextprotocol/inspector --cli node dist/index.js --method tools/call --tool-name tiki_check_page_exists --tool-arg title=メインページ
+
+      - name: Call tiki_get_siteinfo
+        run: npx @modelcontextprotocol/inspector --cli node dist/index.js --method tools/call --tool-name tiki_get_siteinfo
+
+      - name: Call tiki_search_title
+        run: npx @modelcontextprotocol/inspector --cli node dist/index.js --method tools/call --tool-name tiki_search_title --tool-arg query=知木
